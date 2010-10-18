@@ -40,6 +40,8 @@ for ROUTER in $ROUTERS; do
 ROUTER_IP=`echo $ROUTER | awk -F "," '{print $1}'`
 ROUTER_COMMUNITY=`echo $ROUTER | awk -F "," '{print $2}'`
 
+echo "<h1>Router: $ROUTER_IP</h1>" >> $OUTPUT_TMP
+
 if [ $DEBUG == 1 ]; then
 	echo "Scanning $ROUTER_IP with community $ROUTER_COMMUNITY"
 fi
